@@ -5,7 +5,8 @@ import com.example.demo.entity.Transaction;
 import java.util.List;
 
 public interface TransactionDAO {
-    List<Transaction> findByUserID(int id);
+    Transaction findTransactionById(int id);
+    List<Transaction> findAllTransactionsByUserID(int id);
     void save(Transaction transaction);
     void deleteByID(int id);
 }
