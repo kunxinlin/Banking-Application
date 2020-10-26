@@ -18,13 +18,13 @@ public class LoginController {
         this.loginDAO = loginDAO;
     }
 
-    //http://localhost:8080/getAllUsers
-    @GetMapping("/getAllUsers")
+    //http://localhost:8080/getAllLogins
+    @GetMapping("/getAllLogins")
     public List<UserLogin> findAll(){
         return loginDAO.findAll();
     }
 
-    @GetMapping("/getUser/{id}")
+    @GetMapping("/getUserLogin/{id}")
     public UserLogin findById(@PathVariable int id){
         return loginDAO.findById(id);
     }
@@ -40,20 +40,20 @@ public class LoginController {
         return user.getPassword();
     }
 
-    @PostMapping("/addUser")
+    @PostMapping("/addUserLogin")
     public UserLogin addUser(@RequestBody UserLogin user){
         user.setId(0); //incase a id is passed in
         loginDAO.save(user);
         return user;
     }
 
-    @PutMapping("/updateUser")
+    @PutMapping("/updateUserLogin")
     public UserLogin updateUserLogin(@RequestBody UserLogin user){
         loginDAO.save(user);
         return user;
     }
 
-    @DeleteMapping("/deleteUser/{id}")
+    @DeleteMapping("/deleteUserLogin/{id}")
     public String deleteUser(@PathVariable int id){
         UserLogin user = loginDAO.findById(id);
 
