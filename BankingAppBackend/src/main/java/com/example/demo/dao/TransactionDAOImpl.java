@@ -20,7 +20,14 @@ public class TransactionDAOImpl implements TransactionDAO{
 
     @Override
     @Transactional
-    public List<Transaction> findByUserID(int id) {
+    public Transaction findTransactionById(int id) {
+        Session currentSession = entityManager.unwrap(Session.class);
+        return currentSession.get(Transaction.class, id);
+    }
+
+    @Override
+    @Transactional
+    public List<Transaction> findAllTransactionsByUserID(int id) {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.createQuery("FROM Transaction WHERE userID=:userid").setParameter("userid", id).getResultList();
     }
