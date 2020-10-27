@@ -40,6 +40,17 @@ public class LoginController {
         return user.getPassword();
     }
 
+    @GetMapping("/getID/{email}")
+    public int getIdByEmail(@PathVariable("email") String email){
+        UserLogin user = loginDAO.findLoginByEmail(email);
+
+        if(user == null){
+            throw new RuntimeException("Email is not found: " + email);
+        }
+
+        return user.getId();
+    }
+
     @PostMapping("/addUserLogin")
     public UserLogin addUser(@RequestBody UserLogin user){
         user.setId(0); //incase a id is passed in
