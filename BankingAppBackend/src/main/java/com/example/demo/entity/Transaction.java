@@ -12,7 +12,7 @@ public class Transaction {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "description")
+    @Column(name = "name")
     private String description;
 
     @Column(name = "date")
