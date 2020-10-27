@@ -6,8 +6,8 @@ class ShowTransactions extends Component{
     constructor(props){
         super(props)
         this.state={
-            //id: this.props.match.params.id,
-            id: 1,
+            id: props.match.params.id,
+            //id: 1,  //still trying to pass ID state around properly [from Login to ShowTransactions]
             email: this.props.match.params.email,
             transactionHistory: []
         }

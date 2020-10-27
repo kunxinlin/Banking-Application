@@ -24,7 +24,7 @@ class RouterComponent extends Component{
                         <Route path ="/login" component={Login} />
                         <Route path= "/addLogin" component={AddLogin} />
                         <Route path = "/addUser" component={AddUser} />
-                        <Route path="/userHome" component={UserHome} />
+                        <Route path={"/userHome/:id"} component={UserHome} />
                         <Route path ="/showTransactions" component={ShowTransactions} />
                     </Switch>
                     <Footer/>

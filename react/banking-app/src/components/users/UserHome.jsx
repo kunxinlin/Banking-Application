@@ -1,16 +1,28 @@
-import react from 'react'
+import react, {Component} from 'react'
 import {Link} from "react-router-dom";
 import React from "react";
 //git test
 
-function UserHome(){
-    return(
-        <div>
-            <h1>Welcome Back!</h1>
+class UserHome extends Component {
+    constructor(props) {
+        super(props)
+        this.state ={
+            //blase
+            id: props.match.params.id
+        }
+        //bindings
+    }
 
-            <button className='btn btn-link' style={{color: "black"}} type="button"><Link to="/showTransactions">Transaction History</Link></button>
+    transactionHistoryClicked(id){
+        this.props.history.push(`/showTransactions/${id}`)
+    }
 
-        </div>
-    )
+    render() {
+        return(
+            <div>
+                <h1>{this.state.id}</h1>
+            </div>
+        )
+    }
 }
 export default UserHome
