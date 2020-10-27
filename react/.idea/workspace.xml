@@ -49,12 +49,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+=======
+>>>>>>> srat
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -67,9 +70,12 @@
       <option name="presentableId" value="Default" />
       <updated>1603480768585</updated>
       <workItem from="1603480769698" duration="450000" />
+<<<<<<< HEAD
       <workItem from="1603731197781" duration="675000" />
       <workItem from="1603757705834" duration="3494000" />
       <workItem from="1603761213845" duration="4306000" />
+=======
+>>>>>>> srat
     </task>
     <servers />
   </component>
@@ -86,6 +92,7 @@
         </entry>
       </map>
     </option>
+<<<<<<< HEAD
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -93,5 +100,7 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="1034" y="364" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1858.1080@62.0.1858.1080" timestamp="1603763687217" />
+=======
+>>>>>>> srat
   </component>
 </project>
