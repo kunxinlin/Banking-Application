@@ -13,6 +13,10 @@ class LoginCtrlr{
         return axios.get(`http://localhost:8080/getPassword/${email}`)
     }
 
+    getID(email){
+        return axios.get(`http://localhost:8080/getID/${email}`)
+    }
+
     addUserLogin(){
         return axios.post(`http://localhost:8080/addUserLogin`)
     }

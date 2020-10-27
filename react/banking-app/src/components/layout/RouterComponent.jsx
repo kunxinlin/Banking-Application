@@ -5,6 +5,11 @@ import Footer from './Footer'
 import HomePg from './HomePg'
 import UserHome from "../users/UserHome";
 import ShowTransactions from "../users/ShowTransactions";
+import Login from "./Login";
+import AddUser from "../users/AddUser";
+import AddLogin from "../users/AddLogin";
+import RegisterLogin from "../users/RegisterLogin";
+import RegisterUser from "../users/RegisterUser";
 
 //<Route path="/" component={} />
 
@@ -16,6 +21,9 @@ class RouterComponent extends Component{
                     <Header/>
                     <Switch>
                         <Route exact path="/"><HomePg/></Route>
+                        <Route path ="/login" component={Login} />
+                        <Route path= "/addLogin" component={AddLogin} />
+                        <Route path = "/addUser" component={AddUser} />
                         <Route path="/userHome" component={UserHome} />
                         <Route path ="/showTransactions" component={ShowTransactions} />
                     </Switch>

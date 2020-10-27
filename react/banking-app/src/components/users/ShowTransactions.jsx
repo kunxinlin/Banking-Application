@@ -1,11 +1,14 @@
 import react, {Component} from 'react'
 import TransactionCtrlr from "../../services/TransactionCtrlr";
+import LoginCtrlr from "../../services/LoginCtrlr";
 
 class ShowTransactions extends Component{
     constructor(props){
         super(props)
         this.state={
-            id: this.props.match.params.id,
+            //id: this.props.match.params.id,
+            id: 1,
+            email: this.props.match.params.email,
             transactionHistory: []
         }
         this.showTransactions = this.showTransactions.bind(this)
@@ -22,9 +25,20 @@ class ShowTransactions extends Component{
             .then(
                 response => {
                     this.setState({transactionHistory: response.data})
+                    console.log(this.state.id)
                     console.log({transactionHistory: response.data})
                 }
             )
+    }
+
+    getCurrentUserID(email){
+        LoginCtrlr.getID(this.state.email)
+            .then( response => {
+                this.setState({id : response.data})
+                }
+            )
+        //console.log()
+        //console.log()
     }
 
     render() {

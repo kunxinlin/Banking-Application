@@ -8,6 +8,7 @@ function HomePg(){
             <br></br>
             <h2>Tmp Holder</h2>
             <button className='btn btn-link' style={{color: "black"}} type="button"><Link to="/login">Login</Link></button>
+
             <button className='btn btn-link' style={{color: "black"}} type="button"><Link to="/userHome">User Home Test</Link></button>
         </div>
     )
