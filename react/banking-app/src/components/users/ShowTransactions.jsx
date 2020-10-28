@@ -1,6 +1,8 @@
 import react, {Component} from 'react'
 import TransactionCtrlr from "../../services/TransactionCtrlr";
 import LoginCtrlr from "../../services/LoginCtrlr";
+import {Link} from "react-router-dom";
+import React from "react";
 
 class ShowTransactions extends Component{
     constructor(props){
@@ -12,6 +14,7 @@ class ShowTransactions extends Component{
             transactionHistory: []
         }
         this.showTransactions = this.showTransactions.bind(this)
+        this.goHomeClicked = this.goHomeClicked.bind(this)
     }
 
     componentDidMount(){
@@ -31,6 +34,11 @@ class ShowTransactions extends Component{
             )
     }
 
+    goHomeClicked(id){
+        this.props.history.push(`/userHome/${id}`)
+        console.log(this.state.id)
+    }
+
     getCurrentUserID(email){
         LoginCtrlr.getID(this.state.email)
             .then( response => {
@@ -44,14 +52,15 @@ class ShowTransactions extends Component{
     render() {
         return(
             <div>
-                <div className="jumbotron" >
-                    <div className=" table table-bordered" >
+                <button className="btn btn-link home-btn" onClick={()=> this.goHomeClicked(this.state.id)}>Home</button>
+                <div className="jumbotron" style={{backgroundColor:"#1a1a1a"}}  >
+                    <div className=" table table-bordered" style={{borderColor:"#1a1a1a"}}>
                         <thead>
                         <tr style={{textAlign: "center"}}>
                             <th>Type</th>
                             <th>Date</th>
                             <th>Amount</th>
-                            <th>UserID</th>
+                            <th>Account No.</th>
                         </tr>
                         </thead>
                         <tbody>

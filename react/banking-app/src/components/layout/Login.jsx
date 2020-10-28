@@ -82,10 +82,10 @@ class Login extends Component {
     render() {
         return(
             <div>
-                <div className="jumbotron" style={{backgroundColor: "gray"}}>
-                    <h3 style={{textAlign: "center"}}>Login</h3>
-                </div>
-                <div className="Login">
+                <header className = "header" >
+                    JuugHome
+                </header>
+                <div className="jumbotron" style={{backgroundColor: "#1a1a1a" }}>
                     <form onSubmit={this.handleSubmit}>
                         <FormGroup controlId="email">
                             <FormLabel>Email</FormLabel>
@@ -107,11 +107,8 @@ class Login extends Component {
                             />
                         </FormGroup>
                         <b className="error" style={{color: "red"}}>{this.state.error}</b>
-                        <Button block disabled={this.state.isValid} type="submit">
+                        <Button block disabled={this.state.isValid} type="submit" className='btn btn-link'>
                             Login
-                        </Button>
-                        <Button block name="registration" onClick={() =>this.props.history.push("/addLogin/")} >
-                            Register
                         </Button>
                     </form>
                 </div>

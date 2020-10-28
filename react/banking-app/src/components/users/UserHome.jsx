@@ -22,8 +22,21 @@ class UserHome extends Component {
     render() {
         return(
             <div>
-                <h1>{this.state.id}</h1>
-                <button className="btn btn-link text-input" style={{color:"black"}} onClick={()=> this.transactionHistoryClicked(this.state.id)}>Transaction History</button>
+
+                < br></br>
+                < br></br>
+                < br></br>
+                <h1 className="home-header">Welcome,</h1>
+                < br></br>
+                < br></br>
+                < br></br>
+                < br></br>
+                <button className="btn btn-link button" style={{color:"black"}} onClick={()=> this.transactionHistoryClicked(this.state.id)}>Transaction History</button>
+                <button className="btn btn-link button2" style={{color:"black"}} onClick={()=> this.deleteAll()}>Transfer or Pay</button>
+                < br></br>
+                <button className="btn btn-link button3" style={{color:"black"}} onClick={()=> this.deleteAll()}>Account Details</button>
+                <button className="btn btn-link button4" style={{color:"black"}} onClick={()=> this.deleteAll()}>Deposit Checks</button>
+
             </div>
         )
     }

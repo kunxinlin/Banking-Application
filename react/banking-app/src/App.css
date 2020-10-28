@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: #1a1a1a;
+  margin: auto;
+  width: auto;
+  height: 2000px;
 }
 
 .App-logo {
@@ -28,8 +32,64 @@
   color: #61dafb;
 }
 
+.app-logo {
+  background-image: image();
+}
+
+.button {
+  background: linear-gradient(90deg, rgba(148,58,180,1) 14%, rgba(253,29,29,1) 33%, rgba(252,176,69,1) 61%, rgba(69,149,252,1) 88%);  padding: 16px;
+  height: 200px;
+  width: 200px;
+  border-radius: 6px;
+  border: aqua;
+  font: bolder;
+  font-weight: bold;
+}
+
+.button2 {
+  cursor: not-allowed;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(63,82,251,1) 7%, rgba(222,72,130,1) 35%, rgba(81,81,237,1) 70%, rgba(252,70,107,1) 94%);
+  padding: 16px;
+  height: 200px;
+  width: 200px;
+  border-radius: 6px;
+  border: aqua;
+  font: bolder;
+  font-weight: bold;
+}
+
+.button3 {
+  cursor: not-allowed;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(58,180,164,1) 14%, rgba(253,160,29,1) 33%, rgba(69,193,252,1) 66%, rgba(244,69,252,1) 89%);
+  padding: 16px;
+  height: 200px;
+  width: 200px;
+  border-radius: 6px;
+  border: aqua;
+  font: bolder;
+  font-weight: bold;
+}
+
+.button4 {
+  cursor: not-allowed;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(180,175,58,1) 14%, rgba(252,69,189,1) 34%, rgba(253,115,29,1) 66%, rgba(146,252,69,1) 89%);
+  padding: 16px;
+  height: 200px;
+  width: 200px;
+  border-radius: 6px;
+  border: aqua;
+  font: bolder;
+  font-weight: bold;
+}
+
 .footer{
-  margin-top:45%;
+  color: #0d0d0d;
+  left: 16px;
+  position: absolute;
+  bottom: 8px;
 }
 
 .header {
@@ -37,11 +97,32 @@
   margin-bottom: 15px;
   font-size: 30px;
   font: bolder;
-  color: black;
+  color: floralwhite;
   outline-color: black;
   justify-content: center;
   padding: 20px;
 }
+
+.home-btn {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.home-header {
+  color: floralwhite;
+}
+
+.jumbotron {
+  color: royalblue;
+}
+
+.logout-btn{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
 
 @keyframes App-logo-spin {
   from {

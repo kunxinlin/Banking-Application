@@ -10,6 +10,7 @@ import AddUser from "../users/AddUser";
 import AddLogin from "../users/AddLogin";
 import RegisterLogin from "../users/RegisterLogin";
 import RegisterUser from "../users/RegisterUser";
+import Logout from "./Logout";
 
 //<Route path="/" component={} />
 
